@@ -225,7 +225,7 @@ function prepare_text($input) {
 
 function addTweeuOptionsPage() {
     if (function_exists('add_options_page')) {
-        add_options_page('Tweeu', 'Tweeu', 8, __FILE__, 'showTweeuOptionsPage');
+        add_options_page('TweeU', 'TweeU', 8, __FILE__, 'showTweeuOptionsPage');
     }
 }
 
