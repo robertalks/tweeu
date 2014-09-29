@@ -223,13 +223,13 @@ function prepare_text($input) {
 }
 
 
-function addTweetlyOptionsPage() {
+function addTweeuOptionsPage() {
     if (function_exists('add_options_page')) {
-        add_options_page('Tweeu', 'Tweeu', 8, __FILE__, 'showTweetlyOptionsPage');
+        add_options_page('Tweeu', 'Tweeu', 8, __FILE__, 'showTweeuOptionsPage');
     }
 }
 
-function showTweetlyOptionsPage() {
+function showTweeuOptionsPage() {
     include(dirname(__FILE__) . '/tweeu_options.php');
 }
 
@@ -250,5 +250,5 @@ add_action('pending_to_publish', 'triggerTweet', 10, 2);
 
 add_action('publish_to_publish', 'triggerEditTweet', 10, 1);
 
-add_action('admin_menu', 'addTweetlyOptionsPage');
+add_action('admin_menu', 'addTweeuOptionsPage');
 ?>
