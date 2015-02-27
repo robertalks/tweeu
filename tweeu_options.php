@@ -225,7 +225,7 @@ function vc_checkCheckbox($theFieldname) {
                 </p>
             </fieldset>
             <input type="hidden" name="submit-type" value="options">
-            <input type="submit" name="submit" class="button-primary" value="save options"/>
+            <input type="submit" name="submit" class="button-primary" value="Save options"/>
         </div>
     </form>
 
