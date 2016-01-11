@@ -10,7 +10,6 @@ class Tweeupdater
 	public $buhApiUrl = "http://buh.bz";
 	public $debug = false;
 
-	private $buhKey = BUH_KEY;
 	private $twitterConsumerKey = CONSUMER_KEY;
 	private $twitterConsumerSecret = CONSUMER_SECRET;
 	private $twitterConnection;
@@ -62,7 +61,7 @@ class Tweeupdater
 	{
 		$shortUrl = $longurl;
 
-		$buhResp = $this->curlURL($this->buhApiUrl . "/api.php?url=" . $longurl . "&hash=" . $this->buhKey);
+		$buhResp = $this->curlURL($this->buhApiUrl . "/api.php?url=" . $longurl);
 		if ($buhResp != '') {
 			return $buhResp;
 		} 

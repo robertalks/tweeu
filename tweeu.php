@@ -3,14 +3,14 @@
  Plugin Name: TweeU
  Plugin URI: http://tweeu.robertalks.com/
  Description: Updates Twitter when you create or edit a blog entry, uses buh.bz for short urls
- Version: 1.7.1
+ Version: 1.8.0
  Author: Robert Milasan <robert@linux-source.org>
  Author URI: http://www.robertalks.com/
  */
 
 /*
- Copyright 2011-2015  Robert Milasan (email : robert@linux-source.org)
- Copyright 2008  Michael Zehrer (email : zehrer@zepan.net)
+ Copyright 2011-2016 Robert Milasan (email : robert@linux-source.org)
+ Copyright 2008 Michael Zehrer (email : zehrer@zepan.net)
 
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -173,11 +173,11 @@ function buildTwitterStatus($titleTemplate, $thisposttitle, $thispostfirstcatego
 		$maxStatusLength = $maxStatusLength - (strlen($hashtags) + 1);
 	}
 
-	if (ereg("#title#", $titleTemplate)) {
+	if (preg_match("#title#", $titleTemplate)) {
 		$status = str_replace('#title#', $thisposttitle, $titleTemplate);
 	}
 
-	if (ereg("#firstcategory#", $titleTemplate)) {
+	if (preg_match("#firstcategory#", $titleTemplate)) {
 		if ($thispostfirstcategory && $thispostfirstcategory != "Uncategorized") {
 			$status = str_replace('#firstcategory#', $thispostfirstcategory, $status);
 		} else {
